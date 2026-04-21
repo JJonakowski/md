@@ -182,3 +182,10 @@ Jeśli wpis jest uzupełniany po fakcie i dokładny czas nie jest znany, przy `T
 - Zadanie: Dodanie konfiguracji `.gitignore` przed publikacją do Git
 - Działania: Utworzono plik `.gitignore` z wykluczeniami dla `node_modules`, `dist`, katalogów lokalnych IDE i plików środowiskowych/logów; sprawdzono też, że katalog nie jest jeszcze repozytorium Git
 - Wynik: Projekt jest przygotowany do inicjalizacji repozytorium i dodania plików do pierwszego commita bez zbędnych artefaktów lokalnych
+
+- ID: LOG-20260421-002
+- Data: 2026-04-21
+- Timestamp: 2026-04-21 20:17:29
+- Zadanie: Przygotowanie projektu do publikacji przez GitHub Pages
+- Działania: Skonfigurowano `vite.config.js` z bazą `/md/` i wielostronicowym buildem dla czterech plików HTML; dodano workflow `.github/workflows/deploy.yml`; zweryfikowano lokalnie `npm run build`
+- Wynik: Projekt buduje komplet stron do `dist` z poprawnymi ścieżkami zasobów pod adresem GitHub Pages repozytorium
