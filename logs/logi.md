@@ -210,3 +210,38 @@ Jeśli wpis jest uzupełniany po fakcie i dokładny czas nie jest znany, przy `T
 - Zadanie: Naprawa wyświetlania nowej strony — zastąpienie `.htaccess` Drupala
 - Działania: Wgrano nowy `.htaccess` z `DirectoryIndex index.html` i bez reguł Drupalowych; zachowano redirect HTTP→HTTPS
 - Wynik: Strona `dobry-endokrynolog.pl` wyświetla nową statyczną stronę
+
+- ID: LOG-20260528-003
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:28:00
+- Zadanie: Usunięcie plików Drupala z katalogu głównego FTP
+- Działania: Usunięto `cron.php`, `index.php`, `install.php`, `update.php`, `xmlrpc.php` oraz katalogi `css/`, `includes/`, `languages/`, `modules/`, `themes/`, `tmp/`
+- Wynik: Serwer zawiera wyłącznie pliki statycznej strony i katalog `/backup` ze starym Drupalem
+
+- ID: LOG-20260528-004
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:35:00
+- Zadanie: Usunięcie pozostałości Drupala z katalogu `sites/`
+- Działania: Usunięto `sites/default/` (pliki konfiguracyjne Drupala) oraz szablony `.tpl.php`, CSS i inne pliki motywu z `sites/all/themes/global/`; zachowano `cufon-yui.js`, `RaleighLtPL_400.font.js` i `images/`
+- Wynik: Katalog `sites/` zawiera wyłącznie pliki Cufon potrzebne do renderowania nagłówków; strona działa poprawnie
+
+- ID: LOG-20260528-005
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:40:00
+- Zadanie: Usunięcie pozostałości Drupala z katalogu `misc/`
+- Działania: Usunięto JS Drupala (jquery.js, drupal.js, ahah.js itd.), obrazki forum/watchdog/powered oraz katalog `farbtastic/`; zachowano 9 plików używanych przez statyczną stronę
+- Wynik: Katalog `misc/` zawiera wyłącznie grafiki i ikony potrzebne statycznej stronie
+
+- ID: LOG-20260528-006
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:55:00
+- Zadanie: Usunięcie `/backup` z FTP
+- Działania: Usunięto katalog `/backup` zawierający kopię zapasową starego Drupala
+- Wynik: Serwer zawiera wyłącznie pliki statycznej strony
+
+- ID: LOG-20260528-007
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 22:05:00
+- Zadanie: Optymalizacja `.htaccess` po usunięciu Drupala
+- Działania: Dodano zróżnicowane cache headers (HTML bez cache, assety 1 rok); dodano kompresję gzip przez `mod_deflate`; dodano redirect www → non-www
+- Wynik: Strona ma poprawną politykę cache, skompresowane zasoby i jeden kanoniczny adres URL bez `www`
