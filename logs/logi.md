@@ -196,3 +196,17 @@ Jeśli wpis jest uzupełniany po fakcie i dokładny czas nie jest znany, przy `T
 - Zadanie: Przygotowanie projektu do wdrożenia na serwer docelowy (katalog główny domeny)
 - Działania: Zmieniono `base` w `vite.config.js` z `/md/` na `/`; naprawiono trailing comma w JSON-LD w `index.html`; poprawiono błędny `href="tel:18 540 70 66"` na `href="tel:185407066"` w `index.html`, `oferta-medyczna.html` i `doswiadczenie-zawodowe.html`; przebudowano projekt przez `npm run build`
 - Wynik: Pliki w `dist/` mają poprawne ścieżki zasobów dla katalogu głównego domeny i są gotowe do wgrania na serwer
+
+- ID: LOG-20260528-001
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:22:00
+- Zadanie: Wdrożenie strony na serwer FTP i backup starego Drupala
+- Działania: Pobrano wszystkie pliki z katalogu głównego FTP i wgrano do `/backup`; wgrano zawartość `dist/` na katalog główny serwera przez skrypt Python (`ftplib`); dodano `.vscode/` do `.gitignore`
+- Wynik: Nowa strona statyczna jest wgrana na serwer; stary Drupal zachowany w `/backup`
+
+- ID: LOG-20260528-002
+- Data: 2026-05-28
+- Timestamp: 2026-05-28 21:30:00
+- Zadanie: Naprawa wyświetlania nowej strony — zastąpienie `.htaccess` Drupala
+- Działania: Wgrano nowy `.htaccess` z `DirectoryIndex index.html` i bez reguł Drupalowych; zachowano redirect HTTP→HTTPS
+- Wynik: Strona `dobry-endokrynolog.pl` wyświetla nową statyczną stronę
