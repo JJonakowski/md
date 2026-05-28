@@ -189,3 +189,10 @@ Jeśli wpis jest uzupełniany po fakcie i dokładny czas nie jest znany, przy `T
 - Zadanie: Przygotowanie projektu do publikacji przez GitHub Pages
 - Działania: Skonfigurowano `vite.config.js` z bazą `/md/` i wielostronicowym buildem dla czterech plików HTML; dodano workflow `.github/workflows/deploy.yml`; zweryfikowano lokalnie `npm run build`
 - Wynik: Projekt buduje komplet stron do `dist` z poprawnymi ścieżkami zasobów pod adresem GitHub Pages repozytorium
+
+- ID: LOG-20260525-001
+- Data: 2026-05-25
+- Timestamp: 2026-05-25 00:00:00
+- Zadanie: Przygotowanie projektu do wdrożenia na serwer docelowy (katalog główny domeny)
+- Działania: Zmieniono `base` w `vite.config.js` z `/md/` na `/`; naprawiono trailing comma w JSON-LD w `index.html`; poprawiono błędny `href="tel:18 540 70 66"` na `href="tel:185407066"` w `index.html`, `oferta-medyczna.html` i `doswiadczenie-zawodowe.html`; przebudowano projekt przez `npm run build`
+- Wynik: Pliki w `dist/` mają poprawne ścieżki zasobów dla katalogu głównego domeny i są gotowe do wgrania na serwer

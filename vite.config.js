@@ -2,7 +2,7 @@ const { resolve } = require('path');
 const { defineConfig } = require('vite');
 
 module.exports = defineConfig({
-  base: '/md/',
+  base: '/',
   build: {
     rollupOptions: {
       input: {
