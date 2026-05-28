@@ -3,6 +3,7 @@ dist/
 
 .vscode/
 .idea/
+ftp_backup.py
 _npx/
 
 .DS_Store
